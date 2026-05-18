@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - AfriCrafts</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function(){ emailjs.init({ publicKey: "MssGH04tkqjAcO-e3" }); })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>AfriCrafts</h1>
+                <p class="tagline">Authentic. Bold. Beautiful.</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html" class="active">SHOP</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="#" class="cart-icon" onclick="openCartSidebar(); return false;">🛒 <span class="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Our Collections</h1>
+        <p>Handpicked authentic African fashion and crafts</p>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Traditional Wear -->
+            <div class="product-category">
+                <h2 class="category-title">Traditional Wear</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="akarad.jpg" class="product-image-real" alt="Ankara Print Dashiki">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ankara Print Dashiki</h3>
+                            <p class="product-description">Vibrant geometric patterns, premium cotton fabric</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(48 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 95,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Ankara Print Dashiki', 95000, 'https://placehold.co/300x240/2a9d8f/white?text=Ankara')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="shirts.jpg" class="product-image-real" alt="Men's Kaftan Robe">
+                        </div>
+                        <div class="product-info">
+                            <h3>Men's Kaftan Robe</h3>
+                            <p class="product-description">Elegant embroidered design, breathable fabric</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(100 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 120,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Men\'s Kaftan Robe', 120000, 'https://placehold.co/300x240/e76f51/white?text=Kaftan')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="ii.jpg" class="product-image-real" alt="Kente Cloth Wrap">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kente Cloth Wrap</h3>
+                            <p class="product-description">Traditional Ghanaian design, hand-woven excellence</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(59 reviews)</span></div>                            <div class="product-footer">
+                                <span class="price">UGX 150,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Kente Cloth Wrap', 150000, 'https://placehold.co/300x240/f4a261/white?text=Kente')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accessories -->
+            <div class="product-category">
+                <h2 class="category-title">Accessories</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="bags.jpg" class="product-image-real" alt="Handwoven Basket Bag">
+                        </div>
+                        <div class="product-info">
+                            <h3>Handwoven Basket Bag</h3>
+                            <p class="product-description">Eco-friendly sisal material, traditional weaving</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(202 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 45,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Handwoven Basket Bag', 45000, 'https://placehold.co/300x240/264653/white?text=Basket+Bag')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="jewerly.jpg" class="product-image-real" alt="Beaded Jewelry Set">
+                        </div>
+                        <div class="product-info">
+                            <h3>Beaded Jewelry Set</h3>
+                            <p class="product-description">Necklace and earrings, Maasai-inspired design</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(97 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 35,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Beaded Jewelry Set', 35000, 'https://placehold.co/300x240/e9c46a/white?text=Jewelry')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="oo.jpg" class="product-image-real" alt="African Print Headwrap">
+                        </div>
+                        <div class="product-info">
+                            <h3>African Print Headwrap</h3>
+                            <p class="product-description">Versatile styling, colorful wax print fabric</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(481 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 25,000</span>
+                                <button class="add-to-cart" onclick="addToCart('African Print Headwrap', 25000, 'https://placehold.co/300x240/2a9d8f/white?text=Headwrap')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Décor -->
+            <div class="product-category">
+                <h2 class="category-title">Home Décor</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="canvas.jpg" class="product-image-real" alt="Masai Warrior Painting">
+                        </div>
+                        <div class="product-info">
+                            <h3>Masai Warrior Painting</h3>
+                            <p class="product-description">Canvas art, vibrant acrylic colors, 24x36 inches</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(172 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 180,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Masai Warrior Painting', 180000, 'https://placehold.co/300x240/e76f51/white?text=Painting')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="storage.jpg" class="product-image-real" alt="Storage Basket Collection">
+                        </div>
+                        <div class="product-info">
+                            <h3>Storage Basket Collection</h3>
+                            <p class="product-description">Set of 3 nesting baskets, natural fiber</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(28 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 65,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Storage Basket Collection', 65000, 'https://placehold.co/300x240/f4a261/white?text=Baskets')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="masks.jpg" class="product-image-real" alt="Carved Wooden Mask">
+                        </div>
+                        <div class="product-info">
+                            <h3>Carved Wooden Mask</h3>
+                            <p class="product-description">Authentic tribal design, mahogany wood</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(39 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 85,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Carved Wooden Mask', 85000, 'https://placehold.co/300x240/264653/white?text=Mask')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Textiles -->
+            <div class="product-category">
+                <h2 class="category-title">Premium Textiles</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="tt.jpg" class="product-image-real" alt="Ankara Fabric">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ankara Fabric (6 yards)</h3>
+                            <p class="product-description">100% cotton wax print, vibrant colors</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(48 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 55,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Ankara Fabric 6 yards', 55000, 'https://placehold.co/300x240/2a9d8f/white?text=Ankara')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="mud.jpg" class="product-image-real" alt="Mudcloth Fabric">
+                        </div>
+                        <div class="product-info">
+                            <h3>Mudcloth Fabric</h3>
+                            <p class="product-description">Authentic Mali bogolan, hand-dyed patterns</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(93 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 95,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Mudcloth Fabric', 95000, 'https://placehold.co/300x240/e76f51/white?text=Mudcloth')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="kitenge.jpg" class="product-image-real" alt="Kitenge Fabric Bundle">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kitenge Fabric Bundle</h3>
+                            <p class="product-description">3 assorted designs, 6 yards each, East African prints</p>
+                            <div class="product-rating">★★★★★ <span class="rating-count">(39 reviews)</span></div>
+                            <div class="product-footer">
+                                <span class="price">UGX 135,000</span>
+                                <button class="add-to-cart" onclick="addToCart('Kitenge Fabric Bundle', 135000, 'https://placehold.co/300x240/f4a261/white?text=Kitenge')">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AfriCrafts</h3>
+                    <p>Bringing authentic African fashion and crafts to the world, one masterpiece at a time.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>📧 info@africrafts.ug</p>
+                    <p>📱 +256 700 123 456</p>
+                    <p>📍 Kampala, Uganda</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AfriCrafts. All rights reserved. | Created by AfriCrafts Team ICT Students SLAU
+<br>AINEMBABAZI JOVIA, KATUMBA JIMMY,KATEME SHARON,NAKASAGGA SHATRAH,KANJONYO SAMUEL,KITYO LIVINGSTONE,NALUMANSI PRECIOUS,
+           KISAKYAMUKAMA ENOCK,NYANZI STEVEN, NANDYOSE HADIJAH,KAZIBWE AURTHER<br> G R O U P     O N E </br></p>
+         
+            </div>
+        </div>
+    </footer>
+
+    <script>
+// ============================================
+// AFRICRAFTS - BULLETPROOF CART SYSTEM
+// ============================================
+
+var cart = [];
+
+function loadCart() {
+    try {
+        var saved = localStorage.getItem('africrafts_cart');
+        cart = saved ? JSON.parse(saved) : [];
+    } catch(e) { cart = []; }
+    updateCartCount();
+}
+
+function saveCart() {
+    try { localStorage.setItem('africrafts_cart', JSON.stringify(cart)); } catch(e) {}
+    updateCartCount();
+    renderCartItems();
+}
+
+function addToCart(name, price, imageUrl) {
+    var existing = null;
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].name === name) { existing = cart[i]; break; }
+    }
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({ id: Date.now(), name: name, price: price, quantity: 1,
+            image: imageUrl || 'https://placehold.co/65x65/2a9d8f/white?text=Item' });
+    }
+    saveCart();
+    animateCartIcon();
+    showToast('🛒 ' + name + ' added to cart!');
+    openCartSidebar();
+}
+
+function updateQuantity(index, delta) {
+    var newQty = cart[index].quantity + delta;
+    if (newQty <= 0) {
+        var name = cart[index].name;
+        cart.splice(index, 1);
+        showToast('❌ ' + name + ' removed');
+    } else {
+        cart[index].quantity = newQty;
+    }
+    saveCart();
+}
+
+function removeItem(index) {
+    var name = cart[index].name;
+    cart.splice(index, 1);
+    saveCart();
+    showToast('❌ ' + name + ' removed');
+}
+
+function updateCartCount() {
+    var total = 0;
+    for (var i = 0; i < cart.length; i++) total += cart[i].quantity;
+    var badges = document.querySelectorAll('.cart-count');
+    badges.forEach(function(el) {
+        el.textContent = total;
+        el.style.transform = 'scale(1.5)';
+        setTimeout(function() { el.style.transform = 'scale(1)'; }, 200);
+    });
+}
+
+function animateCartIcon() {
+    var icons = document.querySelectorAll('.cart-icon');
+    icons.forEach(function(icon) {
+        icon.classList.add('cart-bounce');
+        setTimeout(function() { icon.classList.remove('cart-bounce'); }, 600);
+    });
+}
+
+function renderCartItems() {
+    var container = document.getElementById('cart-items');
+    var totalEl = document.getElementById('cart-total');
+    if (!container) return;
+    if (cart.length === 0) {
+        container.innerHTML = `
+            <div class="cart-empty-state">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Your cart is empty</p>
+                <small>Add some beautiful African items!</small>
+            </div>`;
+        if (totalEl) totalEl.textContent = 'UGX 0';
+        return;
+    }
+    var html = '';
+    var total = 0;
+    cart.forEach(function(item, index) {
+        total += item.price * item.quantity;
+        html += `
+        <div class="cart-item-row" id="cart-row-${index}">
+            <img src="${item.image}" class="cart-thumb"
+                 onerror="this.src='https://placehold.co/65x65/2a9d8f/white?text=Item'"
+                 alt="${item.name}">
+            <div class="cart-item-body">
+                <div class="cart-item-name">${item.name}</div>
+                <div class="cart-item-price">UGX ${item.price.toLocaleString()}</div>
+                <div class="cart-item-controls">
+                    <button class="qty-btn" onclick="updateQuantity(${index}, -1)">−</button>
+                    <span class="qty-num">${item.quantity}</span>
+                    <button class="qty-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                    <button class="remove-btn" onclick="removeItem(${index})" title="Remove">🗑</button>
+                </div>
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+    if (totalEl) totalEl.textContent = 'UGX ' + total.toLocaleString();
+}
+
+function createCartUI() {
+    if (document.getElementById('africrafts-cart-sidebar')) return;
+    var html = `
+    <style>
+        #africrafts-cart-sidebar {
+            position: fixed; top: 0; right: -420px;
+            width: 400px; max-width: 100vw; height: 100vh;
+            background: #fff; box-shadow: -8px 0 40px rgba(0,0,0,0.18);
+            z-index: 99999; display: flex; flex-direction: column;
+            transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
+            font-family: 'Poppins', sans-serif;
+        }
+        #africrafts-cart-sidebar.open { right: 0; }
+        #cart-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); z-index: 99998;
+            opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+        }
+        #cart-overlay.visible { opacity: 1; pointer-events: all; }
+        .cart-head {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white; padding: 1.2rem 1.4rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .cart-head h3 { margin: 0; font-size: 1.1rem; letter-spacing: 0.5px; }
+        .cart-close-btn {
+            background: none; border: none; color: white;
+            font-size: 1.8rem; cursor: pointer; line-height: 1; padding: 0 4px;
+            transition: transform 0.2s;
+        }
+        .cart-close-btn:hover { transform: rotate(90deg); }
+        #cart-items { flex: 1; overflow-y: auto; padding: 1rem; }
+        #cart-items::-webkit-scrollbar { width: 4px; }
+        #cart-items::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+        .cart-empty-state { text-align: center; padding: 3rem 1rem; color: #999; }
+        .empty-cart-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+        .cart-item-row {
+            display: flex; gap: 12px; padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0; align-items: flex-start;
+        }
+        .cart-thumb { width: 65px; height: 65px; object-fit: cover; border-radius: 10px; }
+        .cart-item-body { flex: 1; }
+        .cart-item-name { font-weight: 600; font-size: 0.88rem; color: #264653; margin-bottom: 2px; }
+        .cart-item-price { color: #e76f51; font-weight: 700; font-size: 0.88rem; margin-bottom: 6px; }
+        .cart-item-controls { display: flex; align-items: center; gap: 6px; }
+        .qty-btn {
+            width: 28px; height: 28px; border-radius: 50%;
+            border: 2px solid #264653; background: white;
+            cursor: pointer; font-size: 1rem; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            color: #264653; transition: all 0.2s;
+        }
+        .qty-btn:hover { background: #264653; color: white; }
+        .qty-num { font-weight: 700; font-size: 0.95rem; min-width: 20px; text-align: center; }
+        .remove-btn {
+            background: none; border: none; cursor: pointer;
+            font-size: 1.1rem; margin-left: 4px; opacity: 0.6; transition: opacity 0.2s;
+        }
+        .remove-btn:hover { opacity: 1; }
+        .cart-foot {
+            padding: 1rem 1.2rem; border-top: 2px solid #f0f0f0;
+            background: #fafafa;
+        }
+        .cart-total-row {
+            display: flex; justify-content: space-between;
+            font-weight: 700; font-size: 1.05rem; color: #264653;
+            margin-bottom: 1rem;
+        }
+        .checkout-btn {
+            width: 100%; padding: 14px;
+            background: linear-gradient(135deg, #2a9d8f, #264653);
+            color: white; border: none; border-radius: 40px;
+            font-weight: 700; font-size: 1rem; cursor: pointer;
+            font-family: 'Poppins', sans-serif; transition: opacity 0.2s;
+        }
+        .checkout-btn:hover { opacity: 0.9; }
+        .africrafts-toast {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+            background: #264653; color: white; padding: 12px 24px;
+            border-radius: 40px; font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem; z-index: 999999;
+            transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+            white-space: nowrap; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .africrafts-toast.show { transform: translateX(-50%) translateY(0); }
+        .cart-bounce { animation: cartBounce 0.6s ease; }
+        @keyframes cartBounce {
+            0%,100%{transform:scale(1)} 30%{transform:scale(1.3)} 60%{transform:scale(0.9)}
+        }
+        @keyframes fadeSlideIn {
+            from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)}
+        }
+    </style>
+    <div id="africrafts-cart-sidebar">
+        <div class="cart-head">
+            <h3>🛍️ Your Cart</h3>
+            <button class="cart-close-btn" onclick="closeCartSidebar()">×</button>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-foot">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <span id="cart-total">UGX 0</span>
+            </div>
+            <button class="checkout-btn" onclick="showCheckoutModal()">Proceed to Checkout ✓</button>
+        </div>
+    </div>
+    <div id="cart-overlay" onclick="closeCartSidebar()"></div>`;
+    document.body.insertAdjacentHTML('beforeend', html);
+    renderCartItems();
+}
+
+function openCartSidebar() {
+    createCartUI();
+    var sidebar = document.getElementById('africrafts-cart-sidebar');
+    var overlay = document.getElementById('cart-overlay');
+    if (sidebar) sidebar.classList.add('open');
+    if (overlay) overlay.classList.add('visible');
+    renderCartItems();
+}
+
+function closeCartSidebar() {
+    var sidebar = document.getElementById('africrafts-cart-sidebar');
+    var overlay = document.getElementById('cart-overlay');
+    if (sidebar) sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('visible');
+}
+
+function showCheckoutModal() {
+    if (cart.length === 0) { showToast('🛒 Your cart is empty! Add some items first.'); return; }
+    var total = cart.reduce(function(sum, item) { return sum + item.price * item.quantity; }, 0);
+    var existing = document.getElementById('checkout-modal');
+    if (existing) existing.remove();
+    var itemsHTML = cart.map(function(item) {
+        return `<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f0f0f0;font-size:0.9rem;">
+            <span>${item.name} × ${item.quantity}</span>
+            <span style="color:#e76f51;font-weight:600;">UGX ${(item.price * item.quantity).toLocaleString()}</span>
+        </div>`;
+    }).join('');
+    var modal = document.createElement('div');
+    modal.id = 'checkout-modal';
+    modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:999999;display:flex;align-items:center;justify-content:center;padding:1rem;';
+    modal.innerHTML = `
+        <div style="background:white;border-radius:20px;padding:2rem;max-width:480px;width:100%;max-height:90vh;overflow-y:auto;animation:fadeSlideIn 0.3s ease;font-family:'Poppins',sans-serif;">
+            <h2 style="font-family:'Playfair Display',serif;color:#264653;margin-bottom:1.5rem;font-size:1.6rem;">Order Summary</h2>
+            <div style="margin-bottom:1.2rem;">${itemsHTML}</div>
+            <div style="display:flex;justify-content:space-between;font-weight:700;font-size:1.1rem;color:#264653;padding:10px 0;border-top:2px solid #264653;margin-bottom:1.5rem;">
+                <span>Total</span><span style="color:#e76f51;">UGX ${total.toLocaleString()}</span>
+            </div>
+            <div style="margin-bottom:1rem;">
+                <input id="co-name" type="text" placeholder="Full Name *"
+                    style="width:100%;padding:11px 14px;border:2px solid #e0e0e0;border-radius:10px;font-family:'Poppins',sans-serif;margin-bottom:10px;font-size:0.9rem;box-sizing:border-box;">
+                <input id="co-phone" type="tel" placeholder="Phone Number (MTN/Airtel) *"
+                    style="width:100%;padding:11px 14px;border:2px solid #e0e0e0;border-radius:10px;font-family:'Poppins',sans-serif;margin-bottom:10px;font-size:0.9rem;box-sizing:border-box;">
+                <input id="co-address" type="text" placeholder="Delivery Address *"
+                    style="width:100%;padding:11px 14px;border:2px solid #e0e0e0;border-radius:10px;font-family:'Poppins',sans-serif;margin-bottom:10px;font-size:0.9rem;box-sizing:border-box;">
+                <select id="co-payment" style="width:100%;padding:11px 14px;border:2px solid #e0e0e0;border-radius:10px;font-family:'Poppins',sans-serif;margin-bottom:10px;font-size:0.9rem;background:white;box-sizing:border-box;">
+                    <option value="">Select Payment Method</option>
+                    <option>MTN Mobile Money</option>
+                    <option>Airtel Money</option>
+                    <option>Visa / Mastercard</option>
+                    <option>PayPal</option>
+                    <option>Pay on Delivery</option>
+                </select>
+            </div>
+            <div style="display:flex;gap:10px;">
+                <button onclick="document.getElementById('checkout-modal').remove()"
+                    style="flex:1;padding:12px;border:2px solid #ddd;border-radius:40px;background:white;cursor:pointer;font-weight:600;font-family:'Poppins',sans-serif;">
+                    Cancel
+                </button>
+                <button onclick="confirmOrder()"
+                    style="flex:2;padding:12px;border:none;border-radius:40px;background:linear-gradient(135deg,#2a9d8f,#264653);color:white;cursor:pointer;font-weight:700;font-family:'Poppins',sans-serif;font-size:0.95rem;">
+                    ✓ Confirm Order
+                </button>
+            </div>
+        </div>`;
+    document.body.appendChild(modal);
+    modal.addEventListener('click', function(e) { if (e.target === modal) modal.remove(); });
+}
+
+function confirmOrder() {
+    var name    = document.getElementById('co-name').value.trim();
+    var phone   = document.getElementById('co-phone').value.trim();
+    var address = document.getElementById('co-address').value.trim();
+    var payment = document.getElementById('co-payment').value;
+    if (!name || !phone || !address || !payment) { showToast('⚠️ Please fill in all fields!'); return; }
+    var total = cart.reduce(function(sum, item) { return sum + item.price * item.quantity; }, 0);
+    var modal = document.getElementById('checkout-modal');
+    if (modal) modal.remove();
+    var success = document.createElement('div');
+    success.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:999999;display:flex;align-items:center;justify-content:center;padding:1rem;';
+    success.innerHTML = `
+        <div style="background:white;border-radius:20px;padding:2.5rem;max-width:420px;width:100%;text-align:center;font-family:'Poppins',sans-serif;animation:fadeSlideIn 0.3s ease;">
+            <div style="font-size:4rem;margin-bottom:1rem;">✅</div>
+            <h2 style="font-family:'Playfair Display',serif;color:#264653;margin-bottom:0.5rem;">Order Confirmed!</h2>
+            <p style="color:#666;margin-bottom:1rem;">Thank you, <strong>${name}</strong>! Your order has been received.</p>
+            <div style="background:#f9f9f9;border-radius:12px;padding:1rem;margin-bottom:1.5rem;font-size:0.9rem;text-align:left;">
+                <div style="margin-bottom:4px;"><strong>📱 Contact:</strong> ${phone}</div>
+                <div style="margin-bottom:4px;"><strong>📍 Delivery:</strong> ${address}</div>
+                <div style="margin-bottom:4px;"><strong>💳 Payment:</strong> ${payment}</div>
+                <div style="margin-top:8px;padding-top:8px;border-top:1px solid #eee;font-weight:700;color:#e76f51;"><strong>Total: UGX ${total.toLocaleString()}</strong></div>
+            </div>
+            <p style="color:#888;font-size:0.85rem;margin-bottom:1.5rem;">We'll call you within 24 hours for delivery confirmation. 🇺🇬 Asante Sana!</p>
+            <button onclick="this.closest('div[style]').remove()"
+                style="background:linear-gradient(135deg,#f4a261,#e76f51);color:white;border:none;padding:12px 32px;border-radius:40px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;">
+                Continue Shopping
+            </button>
+        </div>`;
+    document.body.appendChild(success);
+
+    // Send email notification via EmailJS
+    var orderItemsList = cart.map(function(item) {
+        return item.name + ' x' + item.quantity + ' = UGX ' + (item.price * item.quantity).toLocaleString();
+    }).join('\n');
+
+    emailjs.send('service_qidra5f', 'template_uwr5bwn', {
+        customer_name:    name,
+        customer_phone:   phone,
+        customer_address: address,
+        payment_method:   payment,
+        order_items:      orderItemsList,
+        order_total:      'UGX ' + total.toLocaleString(),
+        email:            'estherbuyinza51@gmail.com'
+    }).then(function() {
+        console.log('Order notification email sent!');
+    }).catch(function(error) {
+        console.error('Email send failed:', error);
+    });
+
+    cart = [];
+    saveCart();
+    closeCartSidebar();
+}
+
+var toastTimer = null;
+function showToast(message) {
+    var toast = document.getElementById('africrafts-toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'africrafts-toast';
+        toast.className = 'africrafts-toast';
+        document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 3000);
+}
+
+// Expose globally
+window.addToCart         = addToCart;
+window.updateQuantity    = updateQuantity;
+window.removeItem        = removeItem;
+window.openCartSidebar   = openCartSidebar;
+window.closeCartSidebar  = closeCartSidebar;
+window.showCheckoutModal = showCheckoutModal;
+window.confirmOrder      = confirmOrder;
+
+// Init
+document.addEventListener('DOMContentLoaded', function() {
+    loadCart();
+    createCartUI();
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriCrafts - Authentic African Fashion & Handcrafted Treasures</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>AfriCrafts</h1>
+                <p class="tagline">Authentic. Bold. Beautiful.</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="products.html">SHOP</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="#" class="cart-icon" onclick="openCartSidebar(); return false;">🛒 <span class="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Celebrate African Heritage</h2>
+            <p class="hero-subtitle">Discover handcrafted fashion and artisan treasures from across the continent</p>
+            <a href="products.html" class="cta-button">Explore Collections</a>
+        </div>
+        <div class="hero-pattern"></div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Our Collections</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>Traditional Wear</h3>
+                    <p>Authentic kaftans, dashikis, and traditional garments</p>
+                    <a href="products.html" class="category-link">Shop Now →</a>
+                </div>
+                <div class="category-card">
+                    <h3>Accessories</h3>
+                    <p>Handwoven bags, jewelry, and fashion accessories</p>
+                    <a href="products.html" class="category-link">Shop Now →</a>
+                </div>
+                <div class="category-card">
+                    <h3>Home Décor</h3>
+                    <p>Art pieces, baskets, and decorative crafts</p>
+                    <a href="products.html" class="category-link">Shop Now →</a>
+                </div>
+                <div class="category-card">
+                    <h3>Textiles</h3>
+                    <p>Premium African fabrics and textile materials</p>
+                    <a href="products.html" class="category-link">Shop Now →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why AfriCrafts?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <h3>100% Authentic</h3>
+                    <p>Every item is sourced directly from African artisans and verified for authenticity</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Supporting Communities</h3>
+                    <p>Your purchase directly empowers local craftspeople and their families</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Worldwide Shipping</h3>
+                    <p>Fast and reliable delivery to customers across East Africa and globally</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💎</div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>Premium craftsmanship with traditional techniques passed through generations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Connected</h2>
+            <p>Subscribe to receive updates on new collections and exclusive offers</p>
+            <form class="newsletter-form" onsubmit="handleNewsletter(event); return false;">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AfriCrafts</h3>
+                    <p>Bringing authentic African fashion and crafts to the world, one masterpiece at a time.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>📧 info@africrafts.ug</p>
+                    <p>📱 +256 700 123 456</p>
+                    <p>📍 Kampala, Uganda</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AfriCrafts. All rights reserved. | Created by AfriCrafts Team ICT Students SLAU
+<br>AINEMBABAZI JOVIA, KATUMBA JIMMY,KATEME SHARON,NAKASAGGA SHATRAH,KANJONYO SAMUEL,KITYO LIVINGSTONE,NALUMANSI PRECIOUS,
+           KISAKYAMUKAMA ENOCK,NYANZI STEVEN, NANDYOSE HADIJAH,KAZIBWE AURTHER<br> G R O U P     ONE</br></p>
+         
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
